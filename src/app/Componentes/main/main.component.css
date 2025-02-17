@@ -1,0 +1,33 @@
+parking {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+.slot {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px; /* Espaciado entre bloques */
+}
+
+.assigned { background-color: #50b7a6; } /* Lugar asignado */
+.occupied { background-color: #e57373; } /* Lugar ocupado */
+.disabled { background-color: #2c5252; } /* Lugar para discapacitados */
+.empty { background-color: #808080; } /* Lugar vacío */
+
+/* Ajuste adicional para el contenedor de los bloques */
+.color-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+

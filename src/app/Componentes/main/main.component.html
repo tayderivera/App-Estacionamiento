@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="flex flex-col items-center justify-center h-screen bg-[#f5e6d3] p-6">
+    
+  
+    <div class="flex flex-col md:flex-row gap-6 mt-6 w-full max-w-5xl">
+      <!-- Leyenda de colores -->
+      <div class="bg-[#ddd8c5] p-4 rounded-lg flex flex-col gap-3 w-full md:w-1/4">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-[#50b7a6] rounded"></div> <span class="font-mono text-sm">Lugar asignado</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-[#e57373] rounded"></div> <span class="font-mono text-sm">Lugar ocupado</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-[#2c5252] rounded"></div> <span class="font-mono text-sm">Lugar para discapacitados</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-[#808080] rounded"></div> <span class="font-mono text-sm">Lugar vacío</span>
+        </div>
+      </div>
+  
+      <!-- Cuadrícula de asientos -->
+      <div class="grid grid-cols-2 gap-4 w-full md:w-3/4">
+        <div class="flex items-center justify-center rounded-lg text-white font-mono text-xl bg-[#50b7a6]  
+        w-28 h-16 md:w-40 md:h-20 lg:w-52 lg:h-24">A1</div>
+  
+        <div class="flex items-center justify-center rounded-lg text-white font-mono text-xl bg-[#2c5252]  
+        w-28 h-16 md:w-40 md:h-20 lg:w-52 lg:h-24">D1B</div>
+  
+        <div class="flex items-center justify-center rounded-lg text-white font-mono text-xl bg-[#e57373]  
+        w-28 h-16 md:w-40 md:h-20 lg:w-52 lg:h-24">A2</div>
+  
+        <div class="flex items-center justify-center rounded-lg text-white font-mono text-xl bg-[#2c5252]  
+        w-28 h-16 md:w-40 md:h-20 lg:w-52 lg:h-24">D2B</div>
+  
+        <div class="flex items-center justify-center rounded-lg text-white font-mono text-xl bg-[#e57373]  
+        w-28 h-16 md:w-40 md:h-20 lg:w-52 lg:h-24">A3</div>
+  
+        <div class="flex items-center justify-center rounded-lg text-white font-mono text-xl bg-[#808080]  
+        w-28 h-16 md:w-40 md:h-20 lg:w-52 lg:h-24">3B</div>
+      </div>
+    </div>
+  
+    <!-- Pregunta de accesibilidad -->
+    <div class="mt-6 text-xl font-mono">
+      ¿Hay una persona con discapacidad motriz?
+    </div>
+    <div class="flex gap-4 mt-2">
+      <button class="px-4 py-2 border rounded-lg text-lg font-mono bg-gray-300">NO</button>
+      <button class="px-4 py-2 border rounded-lg text-lg font-mono bg-gray-300">SI</button>
+    </div>
+  </div>
+  
