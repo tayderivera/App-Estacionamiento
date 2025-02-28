@@ -5,11 +5,12 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment.development';
 import { CommonModule } from '@angular/common';
 import { routes } from './app.routes';
-
+import { provideDatabase, getDatabase } from '@angular/fire/database';
 export const appConfig: ApplicationConfig = {
   providers: [  CommonModule,provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes),
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    provideDatabase(() => getDatabase())
     
   ]
 };
