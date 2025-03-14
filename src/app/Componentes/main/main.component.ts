@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { FirestoreService } from '../../Servicios/firestore.service';
-
+import { PlumaService } from '../../Servicios/pluma.service';
 @Component({
   selector: 'app-main',
   imports: [HeaderComponent], 
@@ -18,7 +18,7 @@ export class MainComponent implements OnInit {
   // Arreglo de nombres de los cajones
   nombresCajones: string[] = [];
 
-  constructor(private firestoreServ: FirestoreService) {}
+  constructor(private firestoreServ: FirestoreService, private plumaService : PlumaService) {}
 
   ngOnInit(): void {
     this.firestoreServ.obtenerDatos().subscribe((datos: any[]) => {
@@ -48,4 +48,17 @@ export class MainComponent implements OnInit {
   esDiscapacidad(tipo: string): boolean {
     return tipo === 'discapacidad';
   }
+
+ //apertura de las plumas
+ abrirPluma() {
+  this.plumaService.actualizarEstadoPluma('abierto');
+}
+
+cerrarPluma() {
+  this.plumaService.actualizarEstadoPluma('cerrado');
+}
+abrirPlumaEmergencias() {
+  this.plumaService.actualizarEstadoPluma('abierto total');
+}
+
 }
